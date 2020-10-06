@@ -30,4 +30,4 @@ print(lines_printed_backward)
 
 print(lines_printed_random)
 
-print(lines_printed_custom[])
+print str(lines_printed_custom[9:12, 21:24, 32:34, 39:43]))
