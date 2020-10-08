@@ -1,33 +1,35 @@
-from random import sample
+def get_file_lines(filename):
+    in_file = open(filename, 'r')
+    lines = in_file.readlines()
+    in_file.close()
+    return lines
 
-caged_bird = "poem.txt"
-infile = open("poem.txt", "r")
-infile.readlines(caged_bird)
+def lines_printed_backwards(lines_list):
+    lines_list.reverse()
+    lines_length = len(lines_list)
+    for i in range(lines_length):
+        line = lines_list[i]
+        line_num = lines_length - i
+        print(f"{line_num} {line}")
 
-def get_file_lines(caged_bird):
-    lines_list = ["caged_bird"]
-    return lines_list
+from random import choice
+def lines_printed_random(lines_list):
+    for _ in lines_list:
+        print(choice(lines_list))
 
-def lines_printed_backward(caged_bird):
-    lines_list = ["caged_bird"]
-    return lines_list[::,-1]
+def lines_printed_custom(lines_list):
+    in_file = open(lines_list,'r')
+    lines = in_file.readlines()
+    lines.sort
+    for _ in range(len(lines_list)):
+        print(lines_list)
+        
+        
 
-def lines_printed_random(caged_bird):
-    lines_list = "poem.txt" 
-    lines = open(lines_list, "r").read().splitlines()
+print(get_file_lines("poem.txt"))
 
-    for i in sample(lines, i=len(lines)):
-        return lines
+poem_lines = get_file_lines('poem.txt')
 
-def lines_printed_custom(caged_bird):
-    lines_list = ["caged_bird"]
-    return lines_list
+lines_printed_backwards(poem_lines)
 
-
-print(get_file_lines(caged_bird))
-
-print(lines_printed_backward)
-
-print(lines_printed_random)
-
-print str(lines_printed_custom[9:12, 21:24, 32:34, 39:43]))
+lines_printed_random(poem_lines)
