@@ -30,6 +30,14 @@ print(get_file_lines("poem.txt"))
 
 poem_lines = get_file_lines('poem.txt')
 
+print(lines_printed_backwards('poem.txt'))
+
 lines_printed_backwards(poem_lines)
 
+print(lines_printed_random("poem.txt"))
+
 lines_printed_random(poem_lines)
+
+print(lines_printed_custom("poem.txt"))
+
+lines_printed_custom(poem_lines)
