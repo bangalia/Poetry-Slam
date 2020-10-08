@@ -18,10 +18,9 @@ def lines_printed_random(lines_list):
 
 def lines_printed_custom(lines_list):
     lines = lines_list
-    lines.sort
+    lines.sort()
     for _ in range(len(lines_list)):
         print(lines_list)
-        
         
 
 print(get_file_lines("poem.txt"))
