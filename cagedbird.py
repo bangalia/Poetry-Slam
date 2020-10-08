@@ -1,7 +1,6 @@
 def get_file_lines(filename):
-    in_file = open(filename, 'r')
+    in_file = open("poem.txt", 'r')
     lines = in_file.readlines()
-    in_file.close()
     return lines
 
 def lines_printed_backwards(lines_list):
@@ -18,8 +17,7 @@ def lines_printed_random(lines_list):
         print(choice(lines_list))
 
 def lines_printed_custom(lines_list):
-    in_file = open(lines_list,'r')
-    lines = in_file.readlines()
+    lines = lines_list
     lines.sort
     for _ in range(len(lines_list)):
         print(lines_list)
@@ -30,14 +28,12 @@ print(get_file_lines("poem.txt"))
 
 poem_lines = get_file_lines('poem.txt')
 
-print(lines_printed_backwards('poem.txt'))
-
 lines_printed_backwards(poem_lines)
 
-print(lines_printed_random("poem.txt"))
+#print(lines_printed_random("poem.txt"))
 
 lines_printed_random(poem_lines)
 
-print(lines_printed_custom("poem.txt"))
+#print(lines_printed_custom("poem.txt"))
 
 lines_printed_custom(poem_lines)
